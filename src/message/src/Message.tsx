@@ -120,7 +120,9 @@ export default defineComponent({
       cssVars,
       handleClose
     } = this
-    return (
+    return this.raw ? (
+      render(content)
+    ) : (
       <div
         class={`${mergedClsPrefix}-message-wrapper`}
         onMouseenter={this.onMouseenter}
