@@ -1,3 +1,4 @@
+export { default as NMessage } from './src/Message'
 export { default as NMessageProvider } from './src/MessageProvider'
 export { useMessage } from './src/use-message'
 export type {
