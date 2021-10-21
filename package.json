@@ -1,9 +1,12 @@
 {
-  "name": "naive-ui",
+  "name": "@arijs/naive-ui",
   "version": "2.19.9",
   "description": "A Vue 3 Component Library. Fairly Complete, Customizable Themes, Uses TypeScript, Not Too Slow",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "npm run dev",
     "dev": "npm run clean && npm run gen-version && cross-env NODE_ENV=development vite",
@@ -27,7 +30,7 @@
     "build:site:ts": "./scripts/pre-build-site/pre-build-site.sh && cross-env TUSIMPLE=true NODE_ENV=production NODE_OPTIONS=--max-old-space-size=4096 vite build && ./scripts/post-build-site/post-build-site.sh",
     "prepare": "husky install"
   },
-  "author": "07akioni",
+  "author": "Rafael Hengles <rhengles@gmail.com>",
   "license": "MIT",
   "files": [
     "es",
