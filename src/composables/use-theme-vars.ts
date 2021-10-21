@@ -6,7 +6,10 @@ import type { ThemeCommonVars } from '../_styles/common'
 export function useThemeVars (): ComputedRef<ThemeCommonVars> {
   const configProviderInjection = inject(configProviderInjectionKey, null)
   return computed(() => {
-    if (configProviderInjection === null) return commonLight
+    if (
+      configProviderInjection === null ||
+      configProviderInjection === undefined
+    ) { return commonLight }
     const {
       mergedThemeRef: { value: mergedTheme },
       mergedThemeOverridesRef: { value: mergedThemeOverrides }
